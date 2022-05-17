@@ -28,10 +28,48 @@ python manage.py shell
 ```
 - Use these commands to generate a secret key through the shell:
 
-
 ```
 from django.core.management.utils import get_random_secret_key  
 get_random_secret_key()
 ```
 
+- Create new django app using the following command:
 
+```
+python manage.py startapp <app_name>
+```
+- For app's folder and file structure follow the demoapp.
+- The app's folder structure is as follows:
+
+```
+demoapp
+├── admin.py
+├── apps.py
+├── __init__.py
+├── migrations
+│   └── __init__.py
+├── models.py
+├── tests.py
+├── urls.py
+├── v1
+│   ├── __init__.py
+│   ├── urls.py
+│   └── views.py
+└── v2
+    ├── __init__.py
+    ├── urls.py
+    └── views.py
+```
+- Run the project using the following command:
+
+```
+python manage.py runserver
+```
+- To test the demo app use the link below:
+
+```
+For version 1 of the API
+http://127.0.0.1:8000/api/v1/demo
+For version 2 of the API
+http://127.0.0.1:8000/api/v2/demo
+```
