@@ -32,7 +32,13 @@ python manage.py shell
 from django.core.management.utils import get_random_secret_key  
 get_random_secret_key()
 ```
-
+- Change your DJANGO_SETTINGS_MODULE to **settings.local** or **settings.production** depending on your needs use the command
+```bash
+export DJANGO_SETTINGS_MODULE=config.settings.local
+```
+```bash
+export DJANGO_SETTINGS_MODULE=config.settings.production
+```
 - Create new django app using the following command:
 
 ```
