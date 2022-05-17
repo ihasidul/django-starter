@@ -75,7 +75,7 @@ python manage.py runserver
 
 ```
 For version 1 of the API
-http://127.0.0.1:8000/api/v1/demo
+http://127.0.0.1:8000/api/v1/demo/
 For version 2 of the API
-http://127.0.0.1:8000/api/v2/demo
+http://127.0.0.1:8000/api/v2/demo/
 ```
