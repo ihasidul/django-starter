@@ -22,3 +22,16 @@ pip install -r requirements.txt
 - Now you can edit the .env file to set the environment variables.
 - The .env file is used to set the environment variables.
 - Make a .env file as .env_example file. 
+- The secret key is used of env file can be generated using python manage.py shell command.
+```
+python manage.py shell
+```
+- Use these commands to generate a secret key through the shell:
+
+
+```
+from django.core.management.utils import get_random_secret_key  
+get_random_secret_key()
+```
+
+
