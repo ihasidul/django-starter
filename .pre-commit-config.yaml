@@ -10,7 +10,7 @@ repos:
       - id: identity
         #- id: check-hooks-apply
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
+    rev: v4.3.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
@@ -33,12 +33,12 @@ repos:
       - id: trailing-whitespace
         exclude: ^rubycritic/.*$
   - repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 22.6.0
     hooks:
       - id: black
         name: Run black on Python files
   - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.7.1
+    rev: v3.8.2
     hooks:
       - id: reorder-python-imports
   # - repo: https://github.com/jumanjihouse/pre-commit-hooks
