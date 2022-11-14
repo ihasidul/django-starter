@@ -17,8 +17,6 @@ Example usage:
           --password foo     \
           --email foo@foo.foo
 """
-from xml.dom import UserDataHandler
-
 from django.contrib.auth.management.commands import createsuperuser
 from django.core.management import CommandError
 
@@ -27,6 +25,7 @@ class Command(createsuperuser.Command):
     help = "Create a superuser with a password and email."
 
     def add_arguments(self, parser):
+        print(f"self: {self.create_parser}, parser: {parser}")
         super(Command, self).add_arguments(parser)
         parser.add_argument(
             "--password",
@@ -40,10 +39,6 @@ class Command(createsuperuser.Command):
             default=None,
             help="Specifies the email for the superuser.",
         )
-        # parser.add_argument(
-        #     '--username', dest='username', default=None,
-        #     help='Specifies the username for the superuser.',
-        # )
 
     def handle(self, *args, **options):
         options.setdefault("interactive", False)
@@ -53,7 +48,9 @@ class Command(createsuperuser.Command):
         email = options.get("email")
 
         if not password or not username or not email:
-            raise CommandError("--email --username and --password are required options")
+            raise CommandError(
+                " --email, --username and --password are required options"
+            )
 
         user_data = {
             "username": username,
