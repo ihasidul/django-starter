@@ -1,6 +1,5 @@
+from demoapp.v2.views import DemoApp
 from django.urls import path
-
-from demoapp.v1.views import DemoApp
 
 app_name = "demoapp"
 
