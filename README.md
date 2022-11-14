@@ -132,3 +132,7 @@ To create super user using this custom command use the following command:
           --password foo     \
           --email foo@foo.foo
 ```
+
+# Inspiration
+
+[HackSoftware Django Styleguide](https://github.com/HackSoftware/Django-Styleguide)
