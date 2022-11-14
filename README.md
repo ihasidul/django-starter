@@ -58,23 +58,52 @@ python manage.py startapp <app_name>
 - The app's folder structure is as follows:
 
 ```
-demoapp
-├── admin.py
-├── apps.py
-├── __init__.py
-├── migrations
-│   └── __init__.py
-├── models.py
-├── tests.py
-├── urls.py
-├── v1
+.
+├── apps
+│   ├── demoapp
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── __init__.py
+│   │   ├── migrations
+│   │   │   └── __init__.py
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   ├── v1
+│   │   │   ├── __init__.py
+│   │   │   ├── urls.py
+│   │   │   └── views.py
+│   │   └── v2
+│   │       ├── __init__.py
+│   │       ├── urls.py
+│   │       └── views.py
 │   ├── __init__.py
+│   └── tasks            # This app will contain all the commands and tasks
+│       ├── admin.py
+│       ├── apps.py
+│       ├── __init__.py
+│       ├── management
+│       │   ├── commands
+│       │   │   ├── createsu.py
+│       │   │   └── __init__.py
+│       │   └── __init__.py
+│       ├── migrations
+│       │   └── __init__.py
+│       ├── models.py
+│       ├── tests.py
+│       └── urls.py
+├── config
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings
+│   │   ├── base.py
+│   │   ├── local.py
+│   │   └── production.py
 │   ├── urls.py
-│   └── views.py
-└── v2
-    ├── __init__.py
-    ├── urls.py
-    └── views.py
+│   └── wsgi.py
+├── manage.py
+├── README.md
+└── requirements.txt
 ```
 
 - Run the project using the following command:
