@@ -12,9 +12,7 @@ python3 -m venv env
 ```
 source env/bin/activate
 ```
-
 - To install the requirements:
-
 ```
 pip install -r requirements.txt
 ```
@@ -60,6 +58,17 @@ python manage.py startapp <app_name>
 ```
 .
 ├── apps
+│   ├── core
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── __init__.py
+│   │   ├── migrations
+│   │   ├── models.py
+│   │   ├── __pycache__
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   ├── v1
+│   │   └── validators.py
 │   ├── demoapp
 │   │   ├── admin.py
 │   │   ├── apps.py
