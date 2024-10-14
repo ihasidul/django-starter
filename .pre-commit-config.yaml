@@ -1,5 +1,5 @@
 ---
-default_stages: [commit, push]
+default_stages: [pre-commit, pre-push]
 default_language_version:
   # force all unspecified Python hooks to run python3
   python: python3
@@ -10,7 +10,7 @@ repos:
       - id: identity
         #- id: check-hooks-apply
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
@@ -33,12 +33,12 @@ repos:
       - id: trailing-whitespace
         exclude: ^rubycritic/.*$
   - repo: https://github.com/psf/black
-    rev: 24.8.0
+    rev: 24.10.0
     hooks:
       - id: black
         name: Run black on Python files
   - repo: https://github.com/asottile/reorder-python-imports
-    rev: v3.13.0
+    rev: v3.14.0
     hooks:
       - id: reorder-python-imports
   # - repo: https://github.com/jumanjihouse/pre-commit-hooks
